@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuestionsActivity"></activity>
+        <activity android:name=".QuestionsActivity" />
+        <activity android:name=".HighscoresActivity"></activity>
     </application>
 
 </manifest>

@@ -84,7 +84,7 @@ public class QuestionsRequest implements Response.Listener<JSONObject>, Response
 
     public void getQuestions(Callback activity){
         this.activity = activity;
-        String url = "https://opentdb.com/api.php?amount=10&category=15";
+        String url = "https://opentdb.com/api.php?amount=10&category=15&type=multiple";
         RequestQueue queue = Volley.newRequestQueue(context);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url,null,this,this);
         queue.add(jsonObjectRequest);
