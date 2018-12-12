@@ -1,6 +1,5 @@
 package com.example.kenne.trivia;
 
-
 import android.content.Context;
 import android.util.Log;
 
@@ -16,9 +15,6 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-
-
-
 
 public class QuestionsRequest implements Response.Listener<JSONObject>, Response.ErrorListener{
 
@@ -55,18 +51,11 @@ public class QuestionsRequest implements Response.Listener<JSONObject>, Response
                 String correct_answer = chooseObject.getString("correct_answer");
 
                 JSONArray incorrect_answer = chooseObject.getJSONArray("incorrect_answers");
-//                ArrayList incorrect_answers = new ArrayList();
-//                for (int y = 0; i < incorrect_answer.length(); i++) {
-//                    String answer = incorrect_answer.getString(y);
-//                    incorrect_answers.add(answer);
-//                    Log.d("testjson411", ' '+answer);
-//                }
-
 
                 Log.d("testjson41", ' '+type);
                 Log.d("testjson42", ' '+question);
                 Log.d("testjson43", ' '+correct_answer);
-//                Log.d("testjson44", String.valueOf(incorrect_answers));
+
                 Log.d("testjson45", String.valueOf(incorrect_answer));
 
                 Question questionInput = new Question(question, correct_answer, type, incorrect_answer);

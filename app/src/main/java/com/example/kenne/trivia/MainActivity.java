@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToQuestions(View view){
-        Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
+        Intent intent = new Intent(this, QuestionsActivity.class);
 //        intent.putExtra("menu",menu);
         startActivity(intent);
 

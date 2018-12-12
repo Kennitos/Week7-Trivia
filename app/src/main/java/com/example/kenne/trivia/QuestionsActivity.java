@@ -86,7 +86,7 @@ public class QuestionsActivity extends AppCompatActivity implements QuestionsReq
         if(questionIndex==9){
             Log.d("abc",' '+String.valueOf(highscore));
             Toast.makeText(this, "All questions done!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(QuestionsActivity.this, HighscoresActivity.class);
+            Intent intent = new Intent(this, HighscoresActivity.class);
             intent.putExtra("highscore",highscore);
 
             startActivity(intent);
