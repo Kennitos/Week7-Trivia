@@ -22,7 +22,7 @@ public class HighscoreRequest implements Response.Listener<JSONArray>, Response.
     Callback activity;
 
     public interface Callback {
-        void gotHighscores(ArrayList<String> highscores);
+        void gotHighscores(ArrayList<HighscoreItem> HighscoreItems);
         void gotHighscoresError(String message);
     }
 
@@ -39,17 +39,21 @@ public class HighscoreRequest implements Response.Listener<JSONArray>, Response.
     @Override
     public void onResponse(JSONArray response) {
         Log.d("highscores_test","Runt onResponse!");
-        ArrayList highscores = new ArrayList();
+        ArrayList<HighscoreItem> HighscoreItems = new ArrayList();
         try {
 //            JSONObject scoreObject = response.getJSONObject("highscore")
 //            JSONArray scoresArray = response.getJSONArray("highscore");
             for (int i = 0; i < response.length(); i++) {
                 JSONObject scoreObject = response.getJSONObject(i);
-                String highscore = scoreObject.getString("highscore");
-                highscores.add(highscore);
-                Log.d("highscores_test",' '+highscore);
+                String name = scoreObject.getString("name");
+                int highscore = scoreObject.getInt("highscore");
+                int id = scoreObject.getInt("id");
+                Log.d("highscores_test",' '+highscore+name+id);
+
+                HighscoreItem highscoreItem = new HighscoreItem(name,highscore,id);
+                HighscoreItems.add(highscoreItem);
             }
-            activity.gotHighscores(highscores);
+            activity.gotHighscores(HighscoreItems);
         } catch (JSONException e) {
             e.printStackTrace();
         }
