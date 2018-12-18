@@ -7,5 +7,5 @@ te weergeven.
 <p float="left">
 <img src="https://github.com/Kennitos/Week7-Trivia/blob/master/screenshots_trivia/trivia2.png" width="275" height="490">
 <img src="https://github.com/Kennitos/Week7-Trivia/blob/master/screenshots_trivia/trivia1.png" width="275" height="490">
-<img src="" width="275" height="490">
+<img src="https://github.com/Kennitos/Week7-Trivia/blob/master/screenshots_trivia/screenshot3.png" width="275" height="490">
 </p>
